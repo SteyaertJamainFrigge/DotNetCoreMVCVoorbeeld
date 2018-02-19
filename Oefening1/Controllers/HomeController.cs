@@ -17,10 +17,15 @@ namespace Oefening1.Controllers
             return View();
         }
 
-        public ViewResult Groenten(string name)
+        public ViewResult Groenten(string zoekGroente)
         {
-            ViewBag.Groenten = groenten;
-
+            if (!string.IsNullOrEmpty(zoekGroente))
+            {
+                ViewBag.Groenten = groenten;
+                ViewBag.ZoekResultaat = $"de gezochte groente is de " +
+                                        $"{Array.IndexOf(groenten, zoekGroente) + 1}e uit de lijst";
+            }
+            
             return View();
         }
     }
