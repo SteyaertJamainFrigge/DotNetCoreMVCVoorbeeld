@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MyHowest;
 
 namespace Oefening1.Controllers
 {
@@ -26,6 +27,15 @@ namespace Oefening1.Controllers
                                         $"{Array.IndexOf(groenten, zoekGroente) + 1}e uit de lijst";
             }
             
+            return View();
+        }
+
+        public ViewResult Strudent()
+        {
+            
+            //List<Student> = new 
+           // { IDesignTimeMvcBuilderConfiguration=23, Naam="Jefke", Afstudeergraad= G}
+
             return View();
         }
     }
